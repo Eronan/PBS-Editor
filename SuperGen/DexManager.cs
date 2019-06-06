@@ -208,6 +208,7 @@ namespace SuperGen
             dexes[pokedexBox.SelectedIndex].entries.Add(de);
             dexes[pokedexBox.SelectedIndex].entries.Sort(delegate (DexEntry de1, DexEntry de2) { return de1.index.CompareTo(de2.index); });
             entriesBinder.ResetBindings(false);
+            entriesBox.SelectedIndex = -1;
             entriesBox.SelectedIndex = dexes[pokedexBox.SelectedIndex].entries.IndexOf(de);
             numericUpDown1.Value = firstAbleIndex();
             button_RemoveEntry.Enabled = true;

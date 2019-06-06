@@ -222,5 +222,38 @@ namespace SuperGen
             entriesBinder.ResetBindings(false);
             if (dexes[pokedexBox.SelectedIndex].entries.Count == 0) { button_RemoveEntry.Enabled = false; }
         }
+
+        private void Button_Increment_Click(object sender, EventArgs e)
+        {
+            List<int> selectedIndices = new List<int>();
+            foreach (int sIndex in entriesBox.SelectedIndices)
+            {
+                dexes[pokedexBox.SelectedIndex].entries[sIndex].index++;
+                selectedIndices.Add(sIndex);
+            }
+            entriesBinder.ResetBindings(false);
+
+            foreach (int sIndex in selectedIndices)
+            {
+                entriesBox.SetSelected(sIndex, true);
+            }
+        }
+
+        private void Button_Decrement_Click(object sender, EventArgs e)
+        {
+            List<int> selectedIndices = new List<int>();
+            
+            foreach (int sIndex in entriesBox.SelectedIndices)
+            {
+                dexes[pokedexBox.SelectedIndex].entries[sIndex].index--;
+                selectedIndices.Add(sIndex);
+            }
+            entriesBinder.ResetBindings(false);
+
+            foreach (int sIndex in selectedIndices)
+            {
+                entriesBox.SetSelected(sIndex, true);
+            }
+        }
     }
 }

@@ -43,13 +43,15 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.button_Increment = new System.Windows.Forms.Button();
+            this.button_Decrement = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // pokedexBox
             // 
             this.pokedexBox.FormattingEnabled = true;
-            this.pokedexBox.Location = new System.Drawing.Point(4, 20);
+            this.pokedexBox.Location = new System.Drawing.Point(12, 24);
             this.pokedexBox.Name = "pokedexBox";
             this.pokedexBox.Size = new System.Drawing.Size(120, 238);
             this.pokedexBox.TabIndex = 0;
@@ -58,7 +60,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 5);
+            this.label1.Location = new System.Drawing.Point(39, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 1;
@@ -66,7 +68,7 @@
             // 
             // button_AddDex
             // 
-            this.button_AddDex.Location = new System.Drawing.Point(4, 258);
+            this.button_AddDex.Location = new System.Drawing.Point(11, 268);
             this.button_AddDex.Name = "button_AddDex";
             this.button_AddDex.Size = new System.Drawing.Size(121, 23);
             this.button_AddDex.TabIndex = 2;
@@ -76,7 +78,7 @@
             // 
             // button_RemoveDex
             // 
-            this.button_RemoveDex.Location = new System.Drawing.Point(4, 280);
+            this.button_RemoveDex.Location = new System.Drawing.Point(11, 292);
             this.button_RemoveDex.Name = "button_RemoveDex";
             this.button_RemoveDex.Size = new System.Drawing.Size(121, 23);
             this.button_RemoveDex.TabIndex = 3;
@@ -86,9 +88,9 @@
             // 
             // button_RemoveEntry
             // 
-            this.button_RemoveEntry.Location = new System.Drawing.Point(127, 255);
+            this.button_RemoveEntry.Location = new System.Drawing.Point(278, 87);
             this.button_RemoveEntry.Name = "button_RemoveEntry";
-            this.button_RemoveEntry.Size = new System.Drawing.Size(122, 23);
+            this.button_RemoveEntry.Size = new System.Drawing.Size(92, 23);
             this.button_RemoveEntry.TabIndex = 7;
             this.button_RemoveEntry.Text = "Remove Entry";
             this.button_RemoveEntry.UseVisualStyleBackColor = true;
@@ -96,9 +98,9 @@
             // 
             // button_AddEntry
             // 
-            this.button_AddEntry.Location = new System.Drawing.Point(127, 233);
+            this.button_AddEntry.Location = new System.Drawing.Point(278, 62);
             this.button_AddEntry.Name = "button_AddEntry";
-            this.button_AddEntry.Size = new System.Drawing.Size(122, 23);
+            this.button_AddEntry.Size = new System.Drawing.Size(92, 23);
             this.button_AddEntry.TabIndex = 6;
             this.button_AddEntry.Text = "Add Entry";
             this.button_AddEntry.UseVisualStyleBackColor = true;
@@ -107,7 +109,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(143, 5);
+            this.label2.Location = new System.Drawing.Point(153, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 13);
             this.label2.TabIndex = 5;
@@ -116,16 +118,16 @@
             // entriesBox
             // 
             this.entriesBox.FormattingEnabled = true;
-            this.entriesBox.Location = new System.Drawing.Point(128, 20);
+            this.entriesBox.Location = new System.Drawing.Point(138, 24);
             this.entriesBox.Name = "entriesBox";
             this.entriesBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.entriesBox.Size = new System.Drawing.Size(120, 212);
+            this.entriesBox.Size = new System.Drawing.Size(120, 329);
             this.entriesBox.TabIndex = 4;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(127, 296);
+            this.comboBox1.Location = new System.Drawing.Point(264, 128);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 8;
@@ -133,7 +135,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(162, 281);
+            this.label3.Location = new System.Drawing.Point(299, 113);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 13);
             this.label3.TabIndex = 9;
@@ -142,7 +144,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 306);
+            this.label4.Location = new System.Drawing.Point(33, 319);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 13);
             this.label4.TabIndex = 11;
@@ -150,7 +152,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 321);
+            this.textBox1.Location = new System.Drawing.Point(11, 334);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(121, 20);
             this.textBox1.TabIndex = 12;
@@ -159,7 +161,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(146, 324);
+            this.label5.Location = new System.Drawing.Point(284, 153);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 13);
             this.label5.TabIndex = 13;
@@ -167,7 +169,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(183, 321);
+            this.numericUpDown1.Location = new System.Drawing.Point(320, 153);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             999999,
             0,
@@ -187,11 +189,33 @@
             0,
             0});
             // 
+            // button_Increment
+            // 
+            this.button_Increment.Location = new System.Drawing.Point(278, 12);
+            this.button_Increment.Name = "button_Increment";
+            this.button_Increment.Size = new System.Drawing.Size(92, 23);
+            this.button_Increment.TabIndex = 15;
+            this.button_Increment.Text = "Increment";
+            this.button_Increment.UseVisualStyleBackColor = true;
+            this.button_Increment.Click += new System.EventHandler(this.Button_Increment_Click);
+            // 
+            // button_Decrement
+            // 
+            this.button_Decrement.Location = new System.Drawing.Point(278, 37);
+            this.button_Decrement.Name = "button_Decrement";
+            this.button_Decrement.Size = new System.Drawing.Size(92, 23);
+            this.button_Decrement.TabIndex = 16;
+            this.button_Decrement.Text = "Decrement";
+            this.button_Decrement.UseVisualStyleBackColor = true;
+            this.button_Decrement.Click += new System.EventHandler(this.Button_Decrement_Click);
+            // 
             // DexManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(252, 346);
+            this.ClientSize = new System.Drawing.Size(392, 361);
+            this.Controls.Add(this.button_Decrement);
+            this.Controls.Add(this.button_Increment);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox1);
@@ -207,8 +231,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pokedexBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(268, 385);
-            this.MinimumSize = new System.Drawing.Size(268, 385);
+            this.MaximumSize = new System.Drawing.Size(408, 400);
+            this.MinimumSize = new System.Drawing.Size(408, 400);
             this.Name = "DexManager";
             this.ShowIcon = false;
             this.Text = "Pokédex Manager";
@@ -236,5 +260,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button button_Increment;
+        private System.Windows.Forms.Button button_Decrement;
     }
 }

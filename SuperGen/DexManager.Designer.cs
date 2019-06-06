@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DexManager));
             this.pokedexBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.button_AddDex = new System.Windows.Forms.Button();
+            this.button_RemoveDex = new System.Windows.Forms.Button();
+            this.button_RemoveEntry = new System.Windows.Forms.Button();
+            this.button_AddEntry = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.entriesBox = new System.Windows.Forms.ListBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -64,45 +64,45 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Pokedexes";
             // 
-            // button1
+            // button_AddDex
             // 
-            this.button1.Location = new System.Drawing.Point(4, 258);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Add Pokédex";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_AddDex.Location = new System.Drawing.Point(4, 258);
+            this.button_AddDex.Name = "button_AddDex";
+            this.button_AddDex.Size = new System.Drawing.Size(121, 23);
+            this.button_AddDex.TabIndex = 2;
+            this.button_AddDex.Text = "Add Pokédex";
+            this.button_AddDex.UseVisualStyleBackColor = true;
+            this.button_AddDex.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // button_RemoveDex
             // 
-            this.button2.Location = new System.Drawing.Point(4, 280);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Remove Pokédex";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button_RemoveDex.Location = new System.Drawing.Point(4, 280);
+            this.button_RemoveDex.Name = "button_RemoveDex";
+            this.button_RemoveDex.Size = new System.Drawing.Size(121, 23);
+            this.button_RemoveDex.TabIndex = 3;
+            this.button_RemoveDex.Text = "Remove Pokédex";
+            this.button_RemoveDex.UseVisualStyleBackColor = true;
+            this.button_RemoveDex.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // button_RemoveEntry
             // 
-            this.button3.Location = new System.Drawing.Point(127, 255);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(122, 23);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Remove Entry";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button_RemoveEntry.Location = new System.Drawing.Point(127, 255);
+            this.button_RemoveEntry.Name = "button_RemoveEntry";
+            this.button_RemoveEntry.Size = new System.Drawing.Size(122, 23);
+            this.button_RemoveEntry.TabIndex = 7;
+            this.button_RemoveEntry.Text = "Remove Entry";
+            this.button_RemoveEntry.UseVisualStyleBackColor = true;
+            this.button_RemoveEntry.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // button_AddEntry
             // 
-            this.button4.Location = new System.Drawing.Point(127, 233);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(122, 23);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Add Entry";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button_AddEntry.Location = new System.Drawing.Point(127, 233);
+            this.button_AddEntry.Name = "button_AddEntry";
+            this.button_AddEntry.Size = new System.Drawing.Size(122, 23);
+            this.button_AddEntry.TabIndex = 6;
+            this.button_AddEntry.Text = "Add Entry";
+            this.button_AddEntry.UseVisualStyleBackColor = true;
+            this.button_AddEntry.Click += new System.EventHandler(this.button4_Click);
             // 
             // label2
             // 
@@ -118,6 +118,7 @@
             this.entriesBox.FormattingEnabled = true;
             this.entriesBox.Location = new System.Drawing.Point(128, 20);
             this.entriesBox.Name = "entriesBox";
+            this.entriesBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.entriesBox.Size = new System.Drawing.Size(120, 212);
             this.entriesBox.TabIndex = 4;
             // 
@@ -197,12 +198,12 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button_RemoveEntry);
+            this.Controls.Add(this.button_AddEntry);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.entriesBox);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_RemoveDex);
+            this.Controls.Add(this.button_AddDex);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pokedexBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -223,10 +224,10 @@
 
         private System.Windows.Forms.ListBox pokedexBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button_AddDex;
+        private System.Windows.Forms.Button button_RemoveDex;
+        private System.Windows.Forms.Button button_RemoveEntry;
+        private System.Windows.Forms.Button button_AddEntry;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox entriesBox;
         private System.Windows.Forms.ComboBox comboBox1;

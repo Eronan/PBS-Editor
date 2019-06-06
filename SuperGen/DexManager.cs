@@ -119,11 +119,11 @@ namespace SuperGen
             numericUpDown1.Value = firstAbleIndex();
             if (dexes[pokedexBox.SelectedIndex].entries.Count > 0)
             {
-                button3.Enabled = true;
+                button_RemoveEntry.Enabled = true;
             }
             else
             {
-                button3.Enabled = false;
+                button_RemoveEntry.Enabled = false;
             }
         }
 
@@ -138,7 +138,7 @@ namespace SuperGen
             dexes.Add(new Pokedex("Untitled Pokédex", new List<DexEntry>()));
             pokedexBinder.ResetBindings(false);
             pokedexBox.SelectedIndex = dexes.Count - 1;
-            button2.Enabled = true;
+            button_RemoveDex.Enabled = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -149,7 +149,7 @@ namespace SuperGen
                 pokedexBinder.ResetBindings(false);
                 if (dexes.Count == 0)
                 {
-                    button2.Enabled = false;
+                    button_RemoveDex.Enabled = false;
                 }
                 else
                 {
@@ -210,14 +210,17 @@ namespace SuperGen
             entriesBinder.ResetBindings(false);
             entriesBox.SelectedIndex = dexes[pokedexBox.SelectedIndex].entries.IndexOf(de);
             numericUpDown1.Value = firstAbleIndex();
-            button3.Enabled = true;
+            button_RemoveEntry.Enabled = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dexes[pokedexBox.SelectedIndex].entries.RemoveAt(entriesBox.SelectedIndex);
+            foreach (int sIndex in entriesBox.SelectedIndices)
+            {
+                dexes[pokedexBox.SelectedIndex].entries.RemoveAt(entriesBox.SelectedIndex);
+            }
             entriesBinder.ResetBindings(false);
-            if (dexes[pokedexBox.SelectedIndex].entries.Count == 0) { button3.Enabled = false; }
+            if (dexes[pokedexBox.SelectedIndex].entries.Count == 0) { button_RemoveEntry.Enabled = false; }
         }
     }
 }

@@ -22,7 +22,7 @@ namespace SuperGen
     public partial class SuperForm : Form
     {
         private string version;
-        private const string LENNEH = "WHY ARE YOU LOOKING IN MY CODE ( ͡° ͜ʖ ͡°)";
+        //private const string LENNEH = "WHY ARE YOU LOOKING IN MY CODE ( ͡° ͜ʖ ͡°)";
         private string html;
         private string masterUrl = "http://pastebin.com/raw/31d54Rb0";
         public static string changelogUrl = "https://pastebin.com/raw/12As4Qvz";
